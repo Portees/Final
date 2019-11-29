@@ -2,6 +2,8 @@ package br.com.ifgoiano.usuariol.util;
 
 import br.com.ifgoiano.usuariol.categoria.CategoriaDAO;
 import br.com.ifgoiano.usuariol.categoria.CategoriaDAOHibernate;
+import br.com.ifgoiano.usuariol.cheque.ChequeDAO;
+import br.com.ifgoiano.usuariol.cheque.ChequeDAOHibernate;
 import br.com.ifgoiano.usuariol.conta.ContaDAO;
 import br.com.ifgoiano.usuariol.conta.ContaDAOHibernate;
 import br.com.ifgoiano.usuariol.lancamento.LancamentoDAO;
@@ -35,4 +37,9 @@ public class DAOFactory {
 		return lancamentoDAO;
 	}
 
+public static ChequeDAO criarChequeDAO() {
+		ChequeDAOHibernate chequeDAO = new ChequeDAOHibernate();
+		chequeDAO.setSession(HibernateUtil.getSessionFactory().getCurrentSession());
+		return chequeDAO;
+	}
 }
