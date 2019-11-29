@@ -12,5 +12,6 @@
 		<mapping class="br.com.ifgoiano.usuariol.usuario.Usuario"/> 
 		<mapping class="br.com.ifgoiano.usuariol.conta.Conta"/>
 		<mapping class="br.com.ifgoiano.usuariol.categoria.Categoria"/>
+                <mapping class="br.com.ifgoiano.usuariol.lancamento.Lancamento"/>
 	</session-factory>
 </hibernate-configuration>

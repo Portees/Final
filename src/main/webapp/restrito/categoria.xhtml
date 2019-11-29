@@ -17,8 +17,8 @@
 				</h:form>
 				<h:form id="arvore" style="float:left">
 					<p:tree value="#{categoriaBean.categoriasTree}" var="node"
-						dynamic="false" cache="false" selectionMode="single">
-						<!--expandAnim="FADE_IN" collapseAnim="FADE_OUT"-->
+						dynamic="false" cache="false" selectionMode="single"
+						expandAnim="FADE_IN" collapseAnim="FADE_OUT">
 						<p:ajax event="select" update=":edicao"
 							listener="#{categoriaBean.selecionar}" />
 						<p:treeNode>
