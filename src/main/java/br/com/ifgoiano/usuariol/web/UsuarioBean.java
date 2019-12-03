@@ -11,6 +11,7 @@ import br.com.ifgoiano.usuariol.conta.Conta;
 import br.com.ifgoiano.usuariol.conta.ContaRN;
 import br.com.ifgoiano.usuariol.usuario.Usuario;
 import br.com.ifgoiano.usuariol.usuario.UsuarioRN;
+import br.com.ifgoiano.usuariol.util.RNException;
 
 @ManagedBean(name = "usuarioBean")
 @RequestScoped
@@ -51,6 +52,15 @@ public class UsuarioBean {
 			this.conta.setFavorita(true);
 			ContaRN contaRN = new ContaRN();
 			contaRN.salvar(this.conta);
+		}
+		// Envia email aps o cadastramento de um usuario novo
+		if (this.destinoSalvar.equals("usuariosucesso")) {
+			try {
+				usuarioRN.enviarEmailPosCadastramento(this.usuario);
+			} catch (RNException e) {
+				context.addMessage(null, new FacesMessage(e.getMessage()));
+				return null;
+			}
 		}
 
 		return this.destinoSalvar;

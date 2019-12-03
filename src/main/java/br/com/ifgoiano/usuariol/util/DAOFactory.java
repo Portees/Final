@@ -1,5 +1,7 @@
 package br.com.ifgoiano.usuariol.util;
 
+import br.com.ifgoiano.usuariol.bolsa.acao.AcaoDAO;
+import br.com.ifgoiano.usuariol.bolsa.acao.AcaoDAOHibernate;
 import br.com.ifgoiano.usuariol.categoria.CategoriaDAO;
 import br.com.ifgoiano.usuariol.categoria.CategoriaDAOHibernate;
 import br.com.ifgoiano.usuariol.cheque.ChequeDAO;
@@ -41,5 +43,11 @@ public static ChequeDAO criarChequeDAO() {
 		ChequeDAOHibernate chequeDAO = new ChequeDAOHibernate();
 		chequeDAO.setSession(HibernateUtil.getSessionFactory().getCurrentSession());
 		return chequeDAO;
+	}
+
+public static AcaoDAO criarAcaoDAO() {
+		AcaoDAOHibernate acaoDAO = new AcaoDAOHibernate();
+		acaoDAO.setSession(HibernateUtil.getSessionFactory().getCurrentSession());
+		return acaoDAO;
 	}
 }

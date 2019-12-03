@@ -14,5 +14,6 @@
 		<mapping class="br.com.ifgoiano.usuariol.categoria.Categoria"/>
                 <mapping class="br.com.ifgoiano.usuariol.lancamento.Lancamento"/>
                 <mapping class="br.com.ifgoiano.usuariol.cheque.Cheque"/>
+                <mapping class="br.com.ifgoiano.usuariol.bolsa.acao.Acao"/>
 	</session-factory>
 </hibernate-configuration>

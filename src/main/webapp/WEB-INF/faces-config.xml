@@ -12,7 +12,7 @@ http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
 			<supported-locale>pt_BR</supported-locale>
 		</locale-config>
 		<resource-bundle>
-			<base-name>\mensagens</base-name>
+			<base-name>/Bundle</base-name>
 			<var>msg</var>
 		</resource-bundle>
 		<!-- <message-bundle>br.com.javaparaweb.financeiro.idioma.CustomMessages</message-bundle> -->

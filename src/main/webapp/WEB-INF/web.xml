@@ -20,10 +20,20 @@
 		<res-type>javax.sql.DataSource</res-type>
 		<res-auth>Container</res-auth>
 	</resource-ref>
+        <resource-ref>
+            <description>Mail Session</description>
+            <res-ref-name>mail/Session</res-ref-name>
+            <res-type>javax.mail.Session</res-type>
+            <res-auth>Container</res-auth>
+        </resource-ref>
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
 		<param-value>Development</param-value>
 	</context-param>
+        <context-param>
+            <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+            <param-value>resources.mensagens</param-value>
+        </context-param>
 	<context-param>
 		<param-name>javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</param-name>
 		<param-value>true</param-value>
@@ -46,6 +56,10 @@
 		/WEB-INF/applicationContext.xml
 		/WEB-INF/applicationContext-security.xml
 	</param-value>
+        <context_param>
+            <param-name>javax.faces.CONFIG_FILES</param-name>
+            <param_value>faces-config</param_value>
+        </context_param>
 	</context-param>
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>

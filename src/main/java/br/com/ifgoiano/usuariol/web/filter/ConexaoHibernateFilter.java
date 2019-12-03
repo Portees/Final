@@ -14,7 +14,7 @@ import org.hibernate.Transaction;
 
 import br.com.ifgoiano.usuariol.util.HibernateUtil;
 
-@WebFilter(urlPatterns = { "/*" })
+@WebFilter(urlPatterns = { "*.jsf" })
 public class ConexaoHibernateFilter implements Filter {
 	private SessionFactory sf;
 
