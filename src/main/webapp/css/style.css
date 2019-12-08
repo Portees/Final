@@ -1,0 +1,162 @@
+/* Config */
+* {
+  font-family: "Roboto", sans-serif;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+textarea:focus,
+textarea,
+input:focus,
+input,
+select:focus,
+select {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+i {
+  font-size: 30px;
+}
+.large {
+  font-size: 6rem;
+}
+.medium {
+  font-size: 4rem;
+}
+
+/* Styling */
+
+#container {
+  display: flex;
+}
+
+/* Menu */
+
+#menu {
+  background: #212121;
+  height: 100vh;
+  border-right: 2px solid white;
+}
+#showmenu,
+#iconmenu {
+  display: none;
+}
+
+#user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#user p {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+nav {
+  padding: 10px;
+}
+#search-container {
+  display: flex;
+}
+#search-container i {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px 2px 0px 2px;
+}
+input[type="text"] {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 5px 5px 15px;
+  background: transparent;
+  color: white;
+}
+input[type="text"]:focus {
+  border-color: white;
+}
+.search-active {
+  background: white !important;
+  color: #212121;
+}
+
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 1px;
+}
+li p {
+  margin: 0px 0px 0px 5px;
+}
+#logout {
+  color: red;
+}
+li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+/* Content */
+#content {
+  background: #ccc;
+  color: #212121;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div#painel,
+div#graficos,
+div#consultas {
+  width: 100%;
+}
+
+div#options {
+  width: 100%;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.hidden {
+  display: none !important;
+}
+.view {
+  display: block !important;
+}
+
+.navigation-menu {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.navigation-menu:hover {
+  color: white;
+}
+
+@media (max-width: 800px) {
+  #showmenu {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+  input[type="checkbox"]:checked + nav {
+    display: block;
+  }
+}

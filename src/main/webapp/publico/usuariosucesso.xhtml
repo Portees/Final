@@ -3,8 +3,42 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html">
-<ui:composition template="/templates/externa.xhtml">
-	<ui:define name="corpo">
+<!--<ui:composition template="/templates/interna1.xhtml">-->
+	<!--<ui:define name="corpo">-->
+    <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css"/>
+</head>
+
+<body>
+  <div class="py-5 text-center align-items-center d-flex" style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, .75), rgba(44, 62, 80, .75)); background-size: 100%;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-12 mx-auto"> <i class="d-block fa fa-stop-circle mb-3 text-muted fa-5x"></i>
+          <h1 class="display-3 mb-4">Seja Bem-vindo, <h:outputText value="#{usuarioBean.usuario.nome}" /> </h1>
+          <p class="lead mb-5">Seu cadastro foi efetuado com sucesso.</p> <a href="login.jsf" class="btn btn-lg btn-primary mx-1">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
 		<h1>
 			<h:outputText value="#{usuarioBean.usuario.nome}" />
 			, seja Bem-vindo
@@ -12,6 +46,7 @@
 		Seu cadastro foi efetuado com sucesso.
 		<br />
 		Clique <a href="login.jsf">aqui</a> para efetuar o login.
-	</ui:define>
-</ui:composition>
+            -->
+	<!--</ui:define>-->
+<!--</ui:composition>-->
 </html>
